@@ -1,41 +1,106 @@
-# Prerequisites
+# ===== Compilación (genéricos) =====
 *.d
-
-# Compiled Object files
-*.slo
-*.lo
 *.o
 *.obj
+*.lo
+*.slo
+*.dwo
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
+# Enlazador / depuración
 *.ilk
-
-# Debugger Files
 *.pdb
+*.ipdb
+*.iobj
+*.rsp
+*.tlog
+*.idb
+*.opendb
+*.lastbuildstate
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# Ejecutables / binarios
 *.exe
 *.out
 *.app
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.la
+*.lai
 
-# debug information files
-*.dwo
+# Encabezados precompilados
+*.gch
+*.pch
+
+# Fortran modules (por si acaso)
+*.mod
+*.smod
+
+# Cobertura (gcov/llvm)
+*.gcda
+*.gcno
+*.profraw
+*.profdata
+coverage/
+lcov.info
+
+# Dumps (MSYS/MinGW y Linux)
+*.stackdump
+core
+
+# Logs y cachés
+*.log
+*.cache
+*.tmp
+
+# ===== CMake / Ninja / Make =====
+# (si usas CMake, ignora la carpeta de build)
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CTestTestfile.cmake
+Testing/
+Makefile
+*.make
+*.ninja
+.ninja_deps
+.ninja_log
+install_manifest.txt
+_compile_commands.json
+# Guarda compile_commands.json solo si lo necesitas; por defecto ignóralo:
+compile_commands.json
+
+# Presets locales de CMake (machine-specific)
+CMakeUserPresets.json
+
+# ===== VS Code =====
+# Puedes versionar tasks/launch si quieres compartirlas.
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Code Runner (outputs van al ejecutable ya ignorado)
+# nada extra necesario
+
+# ===== Sistemas operativos =====
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS (por si abres el repo ahí)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ===== Editores / backups =====
+*~
+*.swp
+*.swo
+*.bak
+
