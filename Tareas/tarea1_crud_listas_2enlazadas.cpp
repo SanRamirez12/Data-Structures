@@ -157,37 +157,37 @@ Nodo* eliminarValor(Nodo* head, int valor) {
 int main() {
     Nodo* head = nullptr;
 
-    // Insertar al inicio (base)
+    //Insertar al inicio (base)
     head = insertarInicio(head, 20); // [20]
     head = insertarInicio(head, 10); // [10 <-> 20]
     std::cout << "Tras InsertarInicio x2: "; imprimirAdelante(head);
 
-    // 1) Insertar al final
+    //Insertar al final
     head = insertarFinal(head, 30);  // [10 <-> 20 <-> 30]
     head = insertarFinal(head, 40);  // [10 <-> 20 <-> 30 <-> 40]
     std::cout << "Tras InsertarFinal x2: "; imprimirAdelante(head);
 
-    // 2) Insertar en posicion
+    //Insertar en cualquier posicion
     head = insertarEnPos(head, 0, 5);          // al inicio: [5,10,20,30,40]
     head = insertarEnPos(head, 3, 25);         // antes de índice 3: [5,10,20,25,30,40]
     head = insertarEnPos(head, 999, 50);       // mayor a n => al final: [...,50]
     std::cout << "Tras InsertarEnPos(0,3,999): "; imprimirAdelante(head);
 
-    // 3) Buscar
+    //Buscar por dato y devuelve indice
     std::cout << "Buscar 25 -> idx=" << buscar(head, 25) << "\n"; //deberia devolver 3 por ser la posicion donde se inserto
     std::cout << "Buscar 99  -> idx=" << buscar(head, 99)  << "\n\n"; //deberia devolver -1 ya que no existe ese dato en la lista
 
-    // 4) Eliminar por valor (primera coincidencia)
+    //Eliminar por valor (primera coincidencia)
     head = eliminarValor(head, 5);   // borra cabeza
     head = eliminarValor(head, 30);  // borra en medio
     head = eliminarValor(head, 50);  // borra cola
     head = eliminarValor(head, 99);  // no existe (sin cambios)
     std::cout << "Tras Eliminar 5,30,50,99: "; imprimirAdelante(head);
 
-    // Mostrar también al revés (para verificar punteros 'anterior')
+    //Mostrar también al revés (para verificar punteros 'anterior')
     std::cout << "Reversa: "; imprimirAtrasDesde(obtenerCola(head));
 
-    // Limpieza
+    //Limpieza
     liberarDesdeInicio(head);
     return 0;
 }
