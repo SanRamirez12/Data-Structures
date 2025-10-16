@@ -1,7 +1,7 @@
 #include<iostream>
 
-//Crear un login de usuario, pedir un nombre y una contraseña, volver a pedir contraseña 
-//una y otra vez hasta que la contraseña sea validada
+//Crear un login de usuario, pedir un nombre y una contraseï¿½a, volver a pedir contraseï¿½a 
+//una y otra vez hasta que la contraseï¿½a sea validada
 
 using namespace std;
 

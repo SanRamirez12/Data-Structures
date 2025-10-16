@@ -1,7 +1,7 @@
 #include<iostream>
 
-//Un usuario decide dejar sus ahorros en un fondo de inversión que le ofrece una rentabilidad del 9% anual
-//¿Cuanto dinero tendria este usuario al cabo de 5 años sin retirar dinero?
+//Un usuario decide dejar sus ahorros en un fondo de inversion que le ofrece una rentabilidad del 9% anual
+//Cuanto dinero tendria este usuario al cabo de 5 ahnos sin retirar dinero?
 
 using namespace std;
 
