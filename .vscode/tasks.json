@@ -8,26 +8,27 @@
       "args": [
         "-NoProfile",
         "-ExecutionPolicy", "Bypass",
-        "-Command", "New-Item -ItemType Directory -Force build | Out-Null"
+        "-Command",
+        "New-Item -ItemType Directory -Force build | Out-Null"
       ],
       "problemMatcher": []
     },
     {
-      "label": "build-archivo-activo",
+      "label": "build-proyecto",
       "type": "shell",
-      "command": "g++",
+      "command": "powershell",
       "args": [
-        "-std=c++17",
-        "-O0",
-        "-g",
-        "${file}",
-        "-o",
-        "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+        "-NoProfile",
+        "-ExecutionPolicy", "Bypass",
+        "-Command",
+        "$ErrorActionPreference='Stop'; $src = Get-ChildItem -Path src -Filter *.cpp | ForEach-Object { $_.FullName }; & 'C:/msys64/ucrt64/bin/g++.exe' -std=c++17 -O2 -Iencabezados $src -o build/app.exe"
       ],
-      "group": { "kind": "build", "isDefault": true },
-      "problemMatcher": ["$gcc"],
       "options": { "cwd": "${workspaceFolder}" },
-      "dependsOn": "prep-build-dir"
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true },
+      "dependsOn": "prep-build-dir",
+      "detail": "Compila todos los .cpp con PowerShell (sin usar comodines)."
     }
   ]
 }
+
