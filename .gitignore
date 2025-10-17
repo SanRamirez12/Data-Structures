@@ -1,4 +1,4 @@
-# ===== Compilación (genéricos) =====
+# ===== Compilación genérica =====
 *.d
 *.o
 *.obj
@@ -16,6 +16,7 @@
 *.idb
 *.opendb
 *.lastbuildstate
+*.map
 
 # Ejecutables / binarios
 *.exe
@@ -33,11 +34,7 @@
 *.gch
 *.pch
 
-# Fortran modules (por si acaso)
-*.mod
-*.smod
-
-# Cobertura (gcov/llvm)
+# Cobertura
 *.gcda
 *.gcno
 *.profraw
@@ -45,7 +42,7 @@
 coverage/
 lcov.info
 
-# Dumps (MSYS/MinGW y Linux)
+# Dumps
 *.stackdump
 core
 
@@ -54,11 +51,15 @@ core
 *.cache
 *.tmp
 
-# ===== CMake / Ninja / Make =====
-# (si usas CMake, ignora la carpeta de build)
+# ===== Estructuras de build comunes =====
 build/
 build-*/
 cmake-build-*/
+out/
+bin/
+obj/
+
+# ===== CMake / Ninja / Make =====
 CMakeFiles/
 CMakeCache.txt
 CMakeScripts/
@@ -71,29 +72,63 @@ Makefile
 .ninja_log
 install_manifest.txt
 _compile_commands.json
-# Guarda compile_commands.json solo si lo necesitas; por defecto ignóralo:
+# guarda compile_commands.json solo si lo necesitas
 compile_commands.json
-
-# Presets locales de CMake (machine-specific)
 CMakeUserPresets.json
 
+# ===== Visual Studio (MSBuild / VC++) =====
+.vs/
+# Carpetas de configuración de build
+[Dd]ebug*/
+[Rr]elease*/
+[Rr]eleases*/
+[Xx]64/
+[Xx]86/
+[Ww]in32/
+[Ar][Rr][Mm]*/
+[Ar][Rr][Mm]64*/
+ipch/
+*.ipch
+
+# Bases de datos / caches de VS
+*.VC.db
+*.VC.opendb
+*.sdf
+*.opensdf
+*.suo
+*.cachefile
+*.db
+*.db-shm
+*.db-wal
+
+# Archivos de usuario VS
+*.user
+*.userosscache
+*.usr
+*.vcxproj.user
+
+# Recursos temporales
+*.aps
+
 # ===== VS Code =====
-# Puedes versionar tasks/launch si quieres compartirlas.
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 
-# Code Runner (outputs van al ejecutable ya ignorado)
-# nada extra necesario
+# ===== Qt / Qt Creator (por si lo usas) =====
+*.pro.user*
+*.pri.user*
+.qmake.stash
+CMakeLists.txt.user
 
-# ===== Sistemas operativos =====
+# ===== SO =====
 # Windows
 Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-# macOS (por si abres el repo ahí)
+# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -104,3 +139,6 @@ $RECYCLE.BIN/
 *.swo
 *.bak
 
+# ===== Artifacts de la app =====
+# Tickets generados por la app (puedes versionarlos si quieres, por defecto: ignorados)
+tickets/
