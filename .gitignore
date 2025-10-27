@@ -142,6 +142,7 @@ $RECYCLE.BIN/
 # ===== Artifacts de la app =====
 # Tickets generados por la app (puedes versionarlos si quieres, por defecto: ignorados)
 tickets/
+<<<<<<< Updated upstream
 
 
 # ===== Eclipse (CDT/C++) =====
@@ -160,3 +161,6 @@ tickets/
 .buildpath
 .classpath
 .pydevproject
+=======
+/.metadata/
+>>>>>>> Stashed changes
