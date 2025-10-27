@@ -142,3 +142,21 @@ $RECYCLE.BIN/
 # ===== Artifacts de la app =====
 # Tickets generados por la app (puedes versionarlos si quieres, por defecto: ignorados)
 tickets/
+
+
+# ===== Eclipse (CDT/C++) =====
+# Metadatos de proyecto (mejor ignorarlos: son de usuario/IDE)
+.project
+.cproject
+.settings/
+.externalToolBuilders/
+.recommenders/
+*.launch
+
+# Solo si abriste el workspace completo dentro del repo (no recomendado)
+.metadata/
+
+# Archivos de otros sabores de Eclipse
+.buildpath
+.classpath
+.pydevproject
