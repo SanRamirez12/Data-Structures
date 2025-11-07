@@ -7,9 +7,9 @@
 //============================================================================
 
 #include <iostream>
-using namespace std;
 
-int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	return 0;
+using namespace std;
+int main(void) {
+  cout << "It's me, your first program. Que hay viejo";
+  return 0;
 }
